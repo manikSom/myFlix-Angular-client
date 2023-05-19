@@ -1,0 +1,7 @@
+<mat-menu #appMenu="matMenu">
+  <button mat-menu-item (click)="gotToMovies()">Movies</button>
+  <button mat-menu-item (click)="gotToProfile()">Profile</button>
+  <button mat-menu-item (click)="logOut()">Log Out</button>
+</mat-menu>
+
+<button mat-flat-button [mat-menu-trigger-for]="appMenu">Menu</button>

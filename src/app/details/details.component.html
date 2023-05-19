@@ -1,0 +1,22 @@
+<!-- src/app/user-registration-form/user-registration-form.component.html -->
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Details</mat-card-title>
+  </mat-card-header>
+  <mat-card-content *ngIf="data.Detail === 'Synopsis'">
+    <h3>{{ movie.title }}</h3>
+    <p>{{ movie.description }}</p>
+  </mat-card-content>
+  <mat-card-content *ngIf="data.Detail === 'Director'">
+    <h3>{{ movie.director.name }}</h3>
+    <p>{{ movie.director.biography }}</p>
+    <p>{{ movie.director.birth | date : "longDate" }}</p>
+  </mat-card-content>
+  <mat-card-content *ngIf="data.Detail === 'Genre'">
+    <h3>{{ movie.genre.name }}</h3>
+    <p>{{ movie.genre.description }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button mat-dialog-close color="primary">Close</button>
+  </mat-card-actions>
+</mat-card>
